@@ -16,8 +16,6 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Direkt - 数字指南针",
   description: "最纯粹的数字指南针，为您指明前进的方向",
-  viewport: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no",
-  themeColor: "#1E88E5",
 };
 
 export default function RootLayout({
@@ -28,9 +26,9 @@ export default function RootLayout({
   return (
     <html lang="zh-CN">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-50`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiasing bg-gray-50`}
       >
-        <div className="min-h-screen max-w-md mx-auto bg-white shadow-lg relative">
+        <div className="min-h-screen">
           {children}
         </div>
       </body>

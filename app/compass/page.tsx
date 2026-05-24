@@ -83,7 +83,7 @@ export default function CompassPage() {
             </span>
             <span className="text-2xl text-gray-500">°</span>
           </div>
-          <div className="text-lg text-primary font-medium mt-2">
+          <div className="text-lg font-medium mt-2" style={{ color: '#1E88E5' }}>
             {getDirection(degree)}
           </div>
           
@@ -129,8 +129,9 @@ export default function CompassPage() {
             className={`flex-1 flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-medium transition-all duration-200 ${
               isLocked
                 ? "bg-gray-200 text-gray-600"
-                : "bg-primary hover:bg-primary-dark text-white shadow-lg shadow-primary/30"
+                : "text-white shadow-lg"
             }`}
+            style={!isLocked ? { backgroundColor: '#1E88E5', boxShadow: '0 4px 6px -1px rgba(30, 136, 229, 0.3)' } : {}}
           >
             <Lock size={18} />
             {isLocked ? "已锁定方向" : "锁定当前方向"}
@@ -138,7 +139,8 @@ export default function CompassPage() {
           
           <button
             onClick={handleShare}
-            className="w-14 h-14 bg-white rounded-xl shadow-md flex items-center justify-center text-gray-600 hover:text-primary hover:shadow-lg transition-all duration-200"
+            className="w-14 h-14 bg-white rounded-xl shadow-md flex items-center justify-center text-gray-600 hover:shadow-lg transition-all duration-200"
+            style={{ color: '#1E88E5' }}
           >
             <Share2 size={20} />
           </button>
